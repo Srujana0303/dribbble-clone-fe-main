@@ -1,29 +1,31 @@
 import React from 'react';
 import Heart from "../components/images/heart.svg";
-import Views from "../components/images/views.svg"
+import Views from "../components/images/views.svg";
 import './GalleryItem.css';
 
-function GalleryItem({ item }) {
+function GalleryItem({ item, toggleLike }) {
+  const { image, title, likes, liked, views, prof, author } = item;
+
   return (
     <div className="gallery-item">
-      <img src={item.image} className='item-img' alt={item.title} />
+      <img src={image} className='item-img' alt={title} />
       <div className="item-details">
         <div className='part1'>
           <div className='prof-container'>
-            <img src={item.prof}/>
+            <img src={prof} alt={author} />
           </div>
-          <p>{item.author}</p>
-          <span class="badge-pro">PRO</span>
+          <p>{author}</p>
+          <span className="badge-pro">PRO</span>
         </div>
         <div className='part2'>
-            <div className='icon-cont'>
-              <img src={Heart} alt="" />
-            </div>
-            {item.likes}
-            <div className='icon-cont'>
-              <img src={Views} alt="" /> 
-            </div>
-            {item.views}
+          <div className='icon-cont' onClick={() => toggleLike(item.id)}>
+            <img src={Heart} alt="Like" className={liked ? 'liked' : ''} />
+          </div>
+          <span className={liked ? 'liked' : ''}>{likes}</span>
+          <div className='icon-cont'>
+            <img src={Views} alt="Views" />
+          </div>
+          <span>{views}</span>
         </div>
       </div>
     </div>

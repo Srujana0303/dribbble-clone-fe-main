@@ -5,9 +5,13 @@ import Drop from "../components/images/drop.svg";
 import Search from "../components/images/search.svg";
 import dribbbleLogo from '../components/images/dribbbleLogo.png';
 
-const Navbar = () => {
+const Navbar = ({ onSearch }) => {
   const [showDesignersDropdown, setShowDesignersDropdown] = useState(false);
   const [showCoursesDropdown, setShowCoursesDropdown] = useState(false);
+
+  const handleSearchChange = (event) => {
+    onSearch(event.target.value);
+  };
 
   return (
     <div className='header'>
@@ -25,7 +29,6 @@ const Navbar = () => {
             <div className='dropdown-menu'>
               <div className='dropdown-item'>Designer search</div>
               <div className='dropdown-item'>Post a job</div>
-              
             </div>
           )}
         </div>
@@ -50,7 +53,7 @@ const Navbar = () => {
       <div className='header-search'>
         <div className="search-container">
           <img src={Search} className="icon" alt="Search"/>
-          <input type="text" placeholder="Search..." />
+          <input type="text" placeholder="Search..." onChange={handleSearchChange} />
         </div>
         <img className='header-prof' src={Prof} alt="Profile" />
       </div>

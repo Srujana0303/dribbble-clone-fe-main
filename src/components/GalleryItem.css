@@ -83,3 +83,7 @@
     width: auto;
     height: 21px;
   }
+
+  .liked {
+    color: red; 
+  }

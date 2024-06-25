@@ -10,6 +10,14 @@ import image5 from '../components/images/image5.jpg';
 import image6 from '../components/images/image6.png';
 import image7 from '../components/images/image7.png';
 import image8 from '../components/images/image8.jpg';
+import image9 from '../components/images/image9.png';
+import image10 from '../components/images/image10.png';
+import image11 from '../components/images/image11.png'; 
+import image12 from '../components/images/image12.png'; 
+import image13 from '../components/images/image13.png'; 
+import image14 from '../components/images/image14.jpg'; 
+import image15 from '../components/images/image15.png'; 
+import image16 from '../components/images/image16.png'; 
 import prof1 from '../components/images/profs/prof1.jpg';
 import prof2 from '../components/images/profs/prof2.png';
 import prof3 from '../components/images/profs/prof3.jpg';
@@ -49,6 +57,15 @@ const MainPageComponent = ({ searchQuery }) => {
     { id: 6, image: image6, title: 'Jessie Maisonneuve,mobile,blue,pink,girl', prof: prof5, author: 'Jessie Maisonneuve', likes: 20, views: 1400, category: 'Mobile', liked: false },
     { id: 7, image: image7, title: 'Animation,klaus,violet,ghost,lavender', prof: prof1, author: 'Klaus', likes: 103, views: 7, category: 'Animation', liked: false },
     { id: 8, image: image8, title: 'Illustration,Ram,red,green,grandma', prof: prof6, author: 'Ram', likes: 1, views: 5, category: 'Illustration', liked: false },
+    { id: 9, image: image9, title: 'Animation,viloet,lavender,caroline', prof: prof1, author: 'Caroline', likes: 500, views: 300,category: 'Animation', liked: false},
+    { id: 10, image: image10, title: 'Branding, Srujana, violet,pink', prof: prof4, author: 'Srujana', likes: 400, views: 100,category: 'Branding', liked: false},
+    { id: 11, image: image11, title: 'Branding, Kovid, white,black', prof: prof2, author: 'Kovid', likes: 250, views: 40,category: 'Branding', liked: false},
+    { id: 12, image: image12, title: 'illustration,kaushik,alcohol,rum,beige,cream', prof: prof1, author: 'Kaushik', likes: 110, views: 10,category: 'Illustration', liked: false},
+    { id: 13, image: image13, title: 'product design, joshika, stocks,white', prof: prof3, author: 'Joshika', likes: 110, views: 10,category: 'Product Design', liked: false},
+    { id: 14, image: image14, title: 'Typography,charitha,cream,beige,cards', prof: prof5, author: 'Charitha', likes: 1, views: 0,category: 'Typography', liked: false},
+    { id: 15, image: image15, title: 'Web Design, Abinesh,violet,lavender,black', prof: prof6, author: 'Abinesh', likes: 99, views: 99,category: 'Web Design', liked: false},
+    { id: 16, image: image16, title: 'Web Design,black,Gayathri', prof: prof5, author: 'Gayathri', likes: 333, views: 1000,category: 'Web Design', liked: false},
+  
   ]);
 
   const toggleDropdown = (item) => {
